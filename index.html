@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Privacy Policy - ReelRoll</title>
+    <style>
+        :root {
+            --bg: #090a0f;
+            --card: #161822;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-active: rgba(255, 255, 255, 0.16);
+            --text: #f1f3f9;
+            --muted: #9aa1b2;
+            --accent: #ff3b5c;
+            --accent-bg: rgba(255, 59, 92, 0.12);
+            --code-bg: rgba(255, 255, 255, 0.06);
+            --green: #10b981;
+            --green-bg: rgba(16, 185, 129, 0.12);
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #f8fafc;
+                --card: #ffffff;
+                --border: #e2e8f0;
+                --border-active: #cbd5e1;
+                --text: #0f172a;
+                --muted: #475569;
+                --accent: #e11d48;
+                --accent-bg: rgba(225, 29, 72, 0.08);
+                --code-bg: #f1f5f9;
+                --green: #059669;
+                --green-bg: rgba(5, 150, 105, 0.1);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 16px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* App Info Meta Card */
+        .meta-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .meta-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .meta-row {
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+
+        .meta-row strong {
+            color: var(--text);
+        }
+
+        /* 100% On-Device Highlight */
+        .highlight-banner {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--green);
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 24px;
+        }
+
+        .highlight-banner p {
+            font-size: 0.92rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        .highlight-banner strong {
+            color: var(--green);
+        }
+
+        /* Section Headings */
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 28px 0 12px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background: var(--accent);
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        p {
+            color: var(--muted);
+            font-size: 0.93rem;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin: 8px 0 16px 16px;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        li {
+            margin-bottom: 8px;
+            padding-left: 4px;
+            line-height: 1.55;
+        }
+
+        li strong {
+            color: var(--text);
+        }
+
+        /* Mobile-First Permission Cards (Replaces rigid table) */
+        .perm-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 14px 0 20px;
+        }
+
+        .perm-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 14px;
+            transition: border-color 0.15s ease;
+        }
+
+        .perm-badge {
+            display: inline-block;
+            background: var(--code-bg);
+            border: 1px solid var(--border-active);
+            color: var(--accent);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            word-break: break-all;
+        }
+
+        .perm-desc {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 14px;
+        }
+
+        .contact-box p {
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            background: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.85em;
+        }
+
+        footer {
+            margin-top: 36px;
+            padding: 16px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Info Card -->
+        <div class="meta-card">
+            <div class="meta-title">Privacy Policy</div>
+            <div class="meta-row"><strong>Application:</strong> ReelRoll (<code>com.prodevinfotech.reelroll</code>)</div>
+            <div class="meta-row"><strong>Developer:</strong> Prodev Infotech</div>
+            <div class="meta-row"><strong>Effective Date:</strong> October 7, 2026</div>
+        </div>
+
+        <!-- On-Device Guarantee Banner -->
+        <div class="highlight-banner">
+            <p><strong>100% On-Device Processing:</strong> ReelRoll does not collect, transmit, store, or sell any of your photos, videos, or personal data on remote servers. All media stays exclusively on your device.</p>
+        </div>
+
+        <!-- Section 1 -->
+        <h2>1. Information We Access</h2>
+        <p>ReelRoll operates solely as a local media viewer and reel maker. It accesses the following items locally on your device:</p>
+        <ul>
+            <li><strong>Photos &amp; Videos:</strong> Read from your device's MediaStore to display media, create reels, and organize albums.</li>
+            <li><strong>Media Location &amp; EXIF:</strong> Reads camera details and GPS coordinates embedded in photos solely to resolve city names on your device using Android's native Geocoder. Location data is never sent off-device.</li>
+            <li><strong>Collections &amp; Tags:</strong> Custom hashtags and albums you create are stored strictly in your device's local application storage.</li>
+        </ul>
+
+        <!-- Section 2: Mobile Cards for Permissions -->
+        <h2>2. Permissions Requested</h2>
+        <p>The app requests only the permissions strictly necessary for its core gallery functionality:</p>
+
+        <div class="perm-list">
+            <div class="perm-card">
+                <span class="perm-badge">READ_MEDIA_IMAGES</span>
+                <div class="perm-desc">Displaying local images and generating photo reel animations.</div>
+            </div>
+
+            <div class="perm-card">
+                <span class="perm-badge">READ_MEDIA_VIDEO</span>
+                <div class="perm-desc">Playing and looping local videos in the vertical feed.</div>
+            </div>
+
+            <div class="perm-card">
+                <span class="perm-badge">READ_MEDIA_VISUAL_USER_SELECTED</span>
+                <div class="perm-desc">Supporting partial photo selection on Android 14+.</div>
+            </div>
+
+            <div class="perm-card">
+                <span class="perm-badge">READ_EXTERNAL_STORAGE</span>
+                <div class="perm-desc">Reading photos and videos on older Android versions (&le; Android 12).</div>
+            </div>
+
+            <div class="perm-card">
+                <span class="perm-badge">ACCESS_MEDIA_LOCATION</span>
+                <div class="perm-desc">Reading embedded photo GPS tags without OS redaction to show local location badges.</div>
+            </div>
+
+            <div class="perm-card">
+                <span class="perm-badge">INTERNET</span>
+                <div class="perm-desc">Checking for official app updates via Google Play In-App Updates.</div>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <h2>3. Data Collection, Sharing &amp; Third Parties</h2>
+        <ul>
+            <li><strong>Data Collection:</strong> We do not collect or upload personal data. No accounts or registrations exist.</li>
+            <li><strong>Data Sharing:</strong> We do not share your data with any third parties or advertisers.</li>
+            <li><strong>Third-Party SDKs:</strong> The app does not include any analytics, tracking, or advertising SDKs. It uses only the official Google Play In-App Update API (<code>com.google.android.play:app-update</code>) to inform users of app updates.</li>
+        </ul>
+
+        <!-- Section 4 -->
+        <h2>4. Data Retention &amp; Deletion</h2>
+        <p>Because all data is stored on your device:</p>
+        <ul>
+            <li>You can delete all application data (tags, collections, favorites) at any time by clearing the app data in <strong>Android Settings &rarr; Apps &rarr; ReelRoll &rarr; Clear Storage</strong> or by uninstalling the app.</li>
+            <li>Uninstalling the app will not delete your original photos or videos from your phone.</li>
+        </ul>
+
+        <!-- Section 5 -->
+        <h2>5. Children's Privacy</h2>
+        <p>ReelRoll is a general-audience tool that does not collect personal data from anyone, including children under 13.</p>
+
+        <!-- Section 6 -->
+        <h2>6. Contact</h2>
+        <div class="contact-box">
+            <p><strong>Developer:</strong> Prodev Infotech</p>
+            <p><strong>Email:</strong> <a href="mailto:app.prodevinfotech@gmail.com">app.prodevinfotech@gmail.com</a></p>
+        </div>
+
+        <footer>
+            &copy; 2026 Prodev Infotech. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
