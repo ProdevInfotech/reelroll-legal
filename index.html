@@ -246,6 +246,8 @@
         <ul>
             <li><strong>Photos &amp; Videos:</strong> Read from your device's MediaStore to display media, create reels, and organize albums.</li>
             <li><strong>Media Location &amp; EXIF:</strong> Reads camera details and GPS coordinates embedded in photos solely to resolve city names on your device using Android's native Geocoder. Location data is never sent off-device.</li>
+            <li><strong>Microphone:</strong> Voice-over recordings you make in the editor are stored only on your device and embedded in your exported video.</li>
+            <li><strong>Exported Reels:</strong> Videos and audio you export are saved to <code>Movies/ReelRoll</code> and <code>Music/ReelRoll</code> on your device.</li>
             <li><strong>Collections &amp; Tags:</strong> Custom hashtags and albums you create are stored strictly in your device's local application storage.</li>
         </ul>
 
@@ -277,6 +279,26 @@
             <div class="perm-card">
                 <span class="perm-badge">ACCESS_MEDIA_LOCATION</span>
                 <div class="perm-desc">Reading embedded photo GPS tags without OS redaction to show local location badges.</div>
+            </div>
+
+            <div class="perm-card">
+                <span class="perm-badge">READ_MEDIA_AUDIO</span>
+                <div class="perm-desc">Reading local audio for background music and beat-synced reels.</div>
+            </div>
+
+            <div class="perm-card">
+                <span class="perm-badge">RECORD_AUDIO</span>
+                <div class="perm-desc">Recording voice-over commentary in the editor. Recordings stay on your device and are only used in your export.</div>
+            </div>
+
+            <div class="perm-card">
+                <span class="perm-badge">POST_NOTIFICATIONS</span>
+                <div class="perm-desc">Showing video export progress and completion status.</div>
+            </div>
+
+            <div class="perm-card">
+                <span class="perm-badge">FOREGROUND_SERVICE</span>
+                <div class="perm-desc">Keeping video export and preview generation running reliably while the app is in the background.</div>
             </div>
 
             <div class="perm-card">
